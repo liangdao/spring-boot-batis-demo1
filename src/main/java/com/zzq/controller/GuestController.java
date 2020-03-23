@@ -5,6 +5,7 @@ import com.zzq.serveice.GuestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
@@ -14,16 +15,15 @@ import java.util.List;
  * @Date 2020/3/23 10:12 PM
  * @Created by zzq
  */
-@Controller
+@RestController
 public class GuestController {
 
     @Autowired
     private GuestService service;
 
     @RequestMapping("/index")
-    public String selectList(){
+    public List<Guest> selectList(){
         List<Guest> list = service.selectList();
-        System.out.println(list);
-        return "index";
+        return list;
     }
 }

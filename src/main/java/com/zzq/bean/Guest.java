@@ -5,6 +5,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Repository;
 
+import javax.persistence.Column;
+
 /**
  * @Classname Guest
  * @Description TODO
@@ -17,6 +19,7 @@ import org.springframework.stereotype.Repository;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Guest {
+    @Column
     private long id;
     private String name;
     private String job;

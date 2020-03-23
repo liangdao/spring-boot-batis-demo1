@@ -20,7 +20,7 @@ public class GuestService {
     private GuestMapper mapper;
 
     public List<Guest> selectList(){
-        return mapper.selectList();
+        return mapper.selectAll();
     }
 
 }

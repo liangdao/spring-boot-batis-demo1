@@ -1,10 +1,8 @@
 package com.zzq.mapper;
 
 import com.zzq.bean.Guest;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
-import org.springframework.stereotype.Service;
+import tk.mybatis.mapper.common.Mapper;
 
 import java.util.List;
 
@@ -14,10 +12,6 @@ import java.util.List;
  * @Date 2020/3/23 10:03 PM
  * @Created by zzq
  */
-@Mapper
 @Repository
-public interface GuestMapper {
-
-    @Select("SELECT * FROM guest")
-    List<Guest> selectList();
+public interface GuestMapper extends Mapper<Guest> {
 }
