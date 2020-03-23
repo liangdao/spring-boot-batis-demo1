@@ -2,7 +2,9 @@ package com.zzq.mapper;
 
 import com.zzq.bean.Guest;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -15,5 +17,7 @@ import java.util.List;
 @Mapper
 @Repository
 public interface GuestMapper {
+
+    @Select("SELECT * FROM guest")
     List<Guest> selectList();
 }
